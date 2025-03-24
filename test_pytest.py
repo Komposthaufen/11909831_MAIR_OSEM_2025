@@ -1,7 +1,7 @@
-
 from Main import is_prime
 from Main import is_even
 from Main import is_odd
+
 
 def test_is_prime():
     assert is_prime(3) is True
