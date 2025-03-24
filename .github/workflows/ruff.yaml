@@ -11,6 +11,5 @@ jobs:
       - name: Run Ruff Linter with Auto-fix
         uses: chartboost/ruff-action@v1
         with:
-          fix: true  # This ensures ruff will automatically apply fixes
-          # Optional: You can specify specific directories or files to lint
-          # path: "src/**/*.py" # Adjust the path as per your project
+          args: --fix  # This enables auto-fixing with ruff
+          
