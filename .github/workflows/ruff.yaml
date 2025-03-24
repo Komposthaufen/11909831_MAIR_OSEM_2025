@@ -1,10 +1,16 @@
 name: Ruff
-on: [ push, pull_request ]
+
+on: 
+  [push, pull_request]
+
 jobs:
   ruff:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: astral-sh/ruff-action@v3
-      with:
-        args: 'format --check'
+      - uses: actions/checkout@v4
+      - name: Run Ruff Linter with Auto-fix
+        uses: chartboost/ruff-action@v1
+        with:
+          fix: true  # This ensures ruff will automatically apply fixes
+          # Optional: You can specify specific directories or files to lint
+          # path: "src/**/*.py" # Adjust the path as per your project
