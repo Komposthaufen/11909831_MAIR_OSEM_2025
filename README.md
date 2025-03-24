@@ -10,7 +10,7 @@ is_prime -> checks if a number is a prime number
 ```
 Also implementet are:
 
-Ruff linter
-Testcases 
-gitignore
-a license
+Ruff linter  
+Testcases   
+gitignore  
+a license  
