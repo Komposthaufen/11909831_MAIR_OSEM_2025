@@ -1,21 +1,29 @@
+# This workflow will install Python dependencies, run tests with a single version of Python
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
-from Mair_OSESM_1HUE import is_prime
-from Mair_OSESM_1HUE import is_even
-from Mair_OSESM_1HUE import is_odd
+name: Run tests
 
-def test_is_prime():
-    assert is_prime(3) == True
-    assert is_prime(7) == True
-    assert is_prime(4) == False
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
+jobs:
+  run-test:
 
-def test_is_even():
-    assert is_even(3) == False
-    assert is_even(4) == True
-    assert is_even(12) == True
+    runs-on: ubuntu-latest
 
+    steps:
+    - uses: actions/checkout@v2
 
-def test_is_odd():
-    assert is_odd(3) == True
-    assert is_odd(5) == True
-    assert is_odd(12) == False
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.12
+
+    - name: Install dependencies
+      run: pip install pytest
+
+    - name: Test with pytest
+      run: pytest
