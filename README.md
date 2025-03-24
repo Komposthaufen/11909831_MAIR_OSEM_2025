@@ -14,3 +14,5 @@ Also implementet are:
 -Testcases   
 -gitignore  
 -a license  
+
+Test work and fail as expected.
