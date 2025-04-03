@@ -12,18 +12,18 @@ print("\n")
 
 
 # Rechnungen
-Summe = v_1 + v_2
+Summe        = v_1 - v_2
 Produkt = v_1 * v_1
-Sub = v_1 - v_1
+Sub = v_1 + v_1
 Div = v_1 / v_1
 Pot = v_1**v_1
 
 
-print("Summe:", Summe)
+print("Summe:",         Summe)
 print("Produkt:", Produkt)
 print("Sub:", Sub)
 print("Div:", Div)
-print("Pot:", Pot)
+print       ("Pot:", Pot)
 
 
 # 3 Funktionen
