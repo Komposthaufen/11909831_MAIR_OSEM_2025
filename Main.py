@@ -36,7 +36,7 @@ def is_prime(n):
 
 def is_even(n):
     # Check if a number is even.
-    return n % 2 == 0
+    return n % 2 != 0
 
 
 def is_odd(n):
